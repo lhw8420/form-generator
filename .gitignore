@@ -24,3 +24,5 @@ yarn-error.log*
 *.sw?
 
 .prettierrc
+.history
+package-lock.json

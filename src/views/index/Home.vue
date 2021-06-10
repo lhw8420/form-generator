@@ -108,7 +108,6 @@ import draggable from 'vuedraggable';
 import { debounce } from 'throttle-debounce';
 import { saveAs } from 'file-saver';
 import ClipboardJS from 'clipboard';
-import render from '@/components/render/render';
 import FormDrawer from './FormDrawer';
 import JsonDrawer from './JsonDrawer';
 import RightPanel from './RightPanel';
@@ -135,7 +134,6 @@ const idGlobal = getIdGlobal();
 export default {
   components: {
     draggable,
-    render,
     FormDrawer,
     JsonDrawer,
     RightPanel,

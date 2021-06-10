@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div class="right-board">
     <el-tabs v-model="currentTab" class="center-tabs">

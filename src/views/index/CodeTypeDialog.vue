@@ -46,34 +46,34 @@ export default {
     return {
       formData: {
         fileName: undefined,
-        type: 'file',
+        type: 'file'
       },
       rules: {
         fileName: [
           {
             required: true,
             message: '请输入文件名',
-            trigger: 'blur',
-          },
+            trigger: 'blur'
+          }
         ],
         type: [
           {
             required: true,
             message: '生成类型不能为空',
-            trigger: 'change',
-          },
-        ],
+            trigger: 'change'
+          }
+        ]
       },
       typeOptions: [
         {
           label: '页面',
-          value: 'file',
+          value: 'file'
         },
         {
           label: '弹窗',
-          value: 'dialog',
-        },
-      ],
+          value: 'dialog'
+        }
+      ]
     };
   },
   computed: {},
@@ -95,8 +95,8 @@ export default {
         this.$emit('confirm', { ...this.formData });
         this.close();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

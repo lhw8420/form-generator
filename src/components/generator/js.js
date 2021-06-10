@@ -5,12 +5,12 @@ import ruleTrigger from './ruleTrigger';
 const units = {
   KB: '1024',
   MB: '1024 / 1024',
-  GB: '1024 / 1024 / 1024',
+  GB: '1024 / 1024 / 1024'
 };
 let confGlobal;
 const inheritAttrs = {
   file: '',
-  dialog: 'inheritAttrs: false,',
+  dialog: 'inheritAttrs: false,'
 };
 
 /**
@@ -111,7 +111,7 @@ function mixinMethod(type) {
       },`,
           resetForm: `resetForm() {
         this.$refs['${confGlobal.formRef}'].resetFields()
-      },`,
+      },`
         }
       : null,
     dialog: {
@@ -127,8 +127,8 @@ function mixinMethod(type) {
           if(!valid) return
           this.close()
         })
-      },`,
-    },
+      },`
+    }
   };
 
   const methods = minxins[type];

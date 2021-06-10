@@ -140,7 +140,7 @@ export default {
     JsonDrawer,
     RightPanel,
     CodeTypeDialog,
-    DraggableItem,
+    DraggableItem
   },
   data() {
     return {
@@ -166,17 +166,17 @@ export default {
       leftComponents: [
         {
           title: '输入型组件',
-          list: inputComponents,
+          list: inputComponents
         },
         {
           title: '选择型组件',
-          list: selectComponents,
+          list: selectComponents
         },
         {
           title: '布局型组件',
-          list: layoutComponents,
-        },
-      ],
+          list: layoutComponents
+        }
+      ]
     };
   },
   computed: {},
@@ -196,21 +196,21 @@ export default {
       handler(val) {
         oldActiveId = val;
       },
-      immediate: true,
+      immediate: true
     },
     drawingList: {
       handler(val) {
         this.saveDrawingListDebounce(val);
         if (val.length === 0) this.idGlobal = 100;
       },
-      deep: true,
+      deep: true
     },
     idGlobal: {
       handler(val) {
         this.saveIdGlobalDebounce(val);
       },
-      immediate: true,
-    },
+      immediate: true
+    }
   },
   mounted() {
     if (Array.isArray(drawingListInDB) && drawingListInDB.length > 0) {
@@ -231,10 +231,10 @@ export default {
         this.$notify({
           title: '成功',
           message: '代码已复制到剪切板，可粘贴。',
-          type: 'success',
+          type: 'success'
         });
         return codeStr;
-      },
+      }
     });
     clipboard.on('error', (e) => {
       this.$message.error('代码复制失败');
@@ -271,7 +271,7 @@ export default {
         this.setLoading(component, true);
         this.$axios({
           method,
-          url,
+          url
         }).then((resp) => {
           this.setLoading(component, false);
           this.setRespData(component, resp.data);
@@ -330,7 +330,7 @@ export default {
     AssembleFormData() {
       this.formData = {
         fields: deepClone(this.drawingList),
-        ...this.formConf,
+        ...this.formConf
       };
     },
     generate(data) {
@@ -432,8 +432,8 @@ export default {
       this.drawingList = deepClone(data.fields);
       delete data.fields;
       this.formConf = data;
-    },
-  },
+    }
+  }
 };
 </script>
 

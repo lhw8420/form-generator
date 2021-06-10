@@ -39,8 +39,8 @@ export default {
   props: {
     jsonStr: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {};
@@ -55,10 +55,10 @@ export default {
         this.$notify({
           title: '成功',
           message: '代码已复制到剪切板，可粘贴。',
-          type: 'success',
+          type: 'success'
         });
         return this.beautifierJson;
-      },
+      }
     });
     clipboard.on('error', (e) => {
       this.$message.error('代码复制失败');
@@ -93,7 +93,7 @@ export default {
           value: codeStr,
           theme: 'vs-dark',
           language: 'json',
-          automaticLayout: true,
+          automaticLayout: true
         });
         // ctrl + s 刷新
         this.jsonEditor.onKeyDown((e) => {
@@ -107,7 +107,7 @@ export default {
       this.$prompt('文件名:', '导出文件', {
         inputValue: `${+new Date()}.json`,
         closeOnClickModal: false,
-        inputPlaceholder: '请输入文件名',
+        inputPlaceholder: '请输入文件名'
       }).then(({ value }) => {
         if (!value) value = `${+new Date()}.json`;
         const codeStr = this.jsonEditor.getValue();
@@ -122,11 +122,11 @@ export default {
         this.$notify({
           title: '错误',
           message: 'JSON格式错误，请检查',
-          type: 'error',
+          type: 'error'
         });
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

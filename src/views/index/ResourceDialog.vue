@@ -41,7 +41,7 @@ export default {
   props: ['originResource'],
   data() {
     return {
-      resources: null,
+      resources: null
     };
   },
   computed: {},
@@ -73,8 +73,8 @@ export default {
       } else {
         this.resources.push(url);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

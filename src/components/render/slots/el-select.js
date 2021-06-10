@@ -5,5 +5,5 @@ export default {
       list.push(<el-option label={item.label} value={item.value} disabled={item.disabled}></el-option>);
     });
     return list;
-  },
+  }
 };

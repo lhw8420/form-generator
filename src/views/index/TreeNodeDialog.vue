@@ -54,35 +54,35 @@ export default {
       id,
       formData: {
         label: undefined,
-        value: undefined,
+        value: undefined
       },
       rules: {
         label: [
           {
             required: true,
             message: '请输入选项名',
-            trigger: 'blur',
-          },
+            trigger: 'blur'
+          }
         ],
         value: [
           {
             required: true,
             message: '请输入选项值',
-            trigger: 'blur',
-          },
-        ],
+            trigger: 'blur'
+          }
+        ]
       },
       dataType: 'string',
       dataTypeOptions: [
         {
           label: '字符串',
-          value: 'string',
+          value: 'string'
         },
         {
           label: '数字',
-          value: 'number',
-        },
-      ],
+          value: 'number'
+        }
+      ]
     };
   },
   computed: {},
@@ -93,7 +93,7 @@ export default {
     },
     id(val) {
       saveTreeNodeId(val);
-    },
+    }
   },
   created() {},
   mounted() {},
@@ -101,7 +101,7 @@ export default {
     onOpen() {
       this.formData = {
         label: undefined,
-        value: undefined,
+        value: undefined
       };
     },
     onClose() {},
@@ -118,8 +118,8 @@ export default {
         this.$emit('commit', this.formData);
         this.close();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

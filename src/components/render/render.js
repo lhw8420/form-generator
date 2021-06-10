@@ -94,7 +94,7 @@ function makeDataObject() {
     slot: null,
     key: null,
     ref: null,
-    refInFor: true,
+    refInFor: true
   };
 }
 
@@ -102,8 +102,8 @@ export default {
   props: {
     conf: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   render(h) {
     const dataObject = makeDataObject();
@@ -120,5 +120,5 @@ export default {
     buildDataObject.call(this, confClone, dataObject);
 
     return h(this.conf.__config__.tag, dataObject, children);
-  },
+  }
 };

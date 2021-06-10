@@ -17,6 +17,6 @@ export default {
       event.preventDefault();
       event.stopPropagation();
     };
-  },
+  }
 };
 </script>

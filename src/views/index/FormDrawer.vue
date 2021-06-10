@@ -86,12 +86,12 @@ import loadBeautifier from '@/utils/loadBeautifier';
 const editorObj = {
   html: null,
   js: null,
-  css: null,
+  css: null
 };
 const mode = {
   html: 'html',
   js: 'javascript',
-  css: 'css',
+  css: 'css'
 };
 let beautifier;
 let monaco;
@@ -112,13 +112,13 @@ export default {
       resourceVisible: false,
       scripts: [],
       links: [],
-      monaco: null,
+      monaco: null
     };
   },
   computed: {
     resources() {
       return this.scripts.concat(this.links);
-    },
+    }
   },
   watch: {},
   created() {},
@@ -130,10 +130,10 @@ export default {
         this.$notify({
           title: '成功',
           message: '代码已复制到剪切板，可粘贴。',
-          type: 'success',
+          type: 'success'
         });
         return codeStr;
-      },
+      }
     });
     clipboard.on('error', (e) => {
       this.$message.error('代码复制失败');
@@ -190,7 +190,7 @@ export default {
           value: codeStr,
           theme: 'vs-dark',
           language: mode[type],
-          automaticLayout: true,
+          automaticLayout: true
         });
       }
       // ctrl + s 刷新
@@ -207,7 +207,7 @@ export default {
         const astBody = ast.program.body;
         if (astBody.length > 1) {
           this.$confirm('js格式不能识别，仅支持修改export default的对象内容', '提示', {
-            type: 'warning',
+            type: 'warning'
           });
           return;
         }
@@ -220,8 +220,8 @@ export default {
               js: jsCodeStr.replace(exportDefault, ''),
               css: editorObj.css.getValue(),
               scripts: this.scripts,
-              links: this.links,
-            },
+              links: this.links
+            }
           };
 
           this.$refs.previewPage.contentWindow.postMessage(postData, location.origin);
@@ -243,7 +243,7 @@ export default {
       this.$prompt('文件名:', '导出文件', {
         inputValue: `${+new Date()}.vue`,
         closeOnClickModal: false,
-        inputPlaceholder: '请输入文件名',
+        inputPlaceholder: '请输入文件名'
       }).then(({ value }) => {
         if (!value) value = `${+new Date()}.vue`;
         const codeStr = this.generateCode();
@@ -271,8 +271,8 @@ export default {
         this.scripts = [];
         this.links = [];
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

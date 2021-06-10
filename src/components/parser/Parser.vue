@@ -11,7 +11,7 @@ const ruleTrigger = {
   'el-cascader': 'change',
   'el-time-picker': 'change',
   'el-date-picker': 'change',
-  'el-rate': 'change',
+  'el-rate': 'change'
 };
 
 const layouts = {
@@ -43,7 +43,7 @@ const layouts = {
         <el-row gutter={scheme.gutter}>{child}</el-row>
       </el-col>
     );
-  },
+  }
 };
 
 function renderFrom(h) {
@@ -121,19 +121,19 @@ function buildListeners(scheme) {
 
 export default {
   components: {
-    render,
+    render
   },
   props: {
     formConf: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     const data = {
       formConfCopy: deepClone(this.formConf),
       [this.formConf.formModel]: {},
-      [this.formConf.formRules]: {},
+      [this.formConf.formRules]: {}
     };
     this.initFormData(data.formConfCopy.fields, data[this.formConf.formModel]);
     this.buildRules(data.formConfCopy.fields, data[this.formConf.formRules]);
@@ -180,10 +180,10 @@ export default {
         this.$emit('submit', this[this.formConf.formModel]);
         return true;
       });
-    },
+    }
   },
   render(h) {
     return renderFrom.call(this, h);
-  },
+  }
 };
 </script>

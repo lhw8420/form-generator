@@ -16,14 +16,14 @@ export default [
       regList: [
         {
           pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
-          message: '手机号格式错误',
-        },
-      ],
+          message: '手机号格式错误'
+        }
+      ]
     },
     // 组件的插槽属性
     __slot__: {
       prepend: '',
-      append: '',
+      append: ''
     },
     __vModel__: 'mobile',
     placeholder: '请输入手机号',
@@ -34,6 +34,6 @@ export default [
     maxlength: 11,
     'show-word-limit': true,
     readonly: false,
-    disabled: false,
-  },
+    disabled: false
+  }
 ];

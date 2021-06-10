@@ -112,7 +112,7 @@ const layouts = {
     </el-row>`;
     str = colWrapper(scheme, str);
     return str;
-  },
+  }
 };
 
 const tags = {
@@ -280,7 +280,7 @@ const tags = {
     const height = el.height ? `:height="${el.height}"` : '';
     const branding = el.branding ? `:branding="${el.branding}"` : '';
     return `<${tag} ${vModel} ${placeholder} ${height} ${branding}></${tag}>`;
-  },
+  }
 };
 
 function attrBuilder(el) {
@@ -290,7 +290,7 @@ function attrBuilder(el) {
     clearable: el.clearable ? 'clearable' : '',
     placeholder: el.placeholder ? `placeholder="${el.placeholder}"` : '',
     width: el.style && el.style.width ? ':style="{width: \'100%\'}"' : '',
-    disabled: el.disabled ? ":disabled='true'" : '',
+    disabled: el.disabled ? ":disabled='true'" : ''
   };
 }
 

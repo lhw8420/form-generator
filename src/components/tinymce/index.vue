@@ -16,15 +16,15 @@ export default {
       default: () => {
         num === 10000 && (num = 1);
         return `tinymce${+new Date()}${num++}`;
-      },
+      }
     },
     value: {
-      default: '',
-    },
+      default: ''
+    }
   },
   data() {
     return {
-      tinymceId: this.id,
+      tinymceId: this.id
     };
   },
   mounted() {
@@ -48,7 +48,7 @@ export default {
         advlist_number_styles: 'default',
         default_link_target: '_blank',
         link_title: false,
-        nonbreaking_force_tab: true,
+        nonbreaking_force_tab: true
       };
       conf = Object.assign(conf, this.$attrs);
       conf.init_instance_callback = (editor) => {
@@ -82,7 +82,7 @@ export default {
       if (tinymce) {
         tinymce.destroy();
       }
-    },
-  },
+    }
+  }
 };
 </script>

@@ -40,7 +40,7 @@ export default {
     return {
       iconList: originList,
       active: null,
-      key: '',
+      key: ''
     };
   },
   watch: {
@@ -50,7 +50,7 @@ export default {
       } else {
         this.iconList = originList;
       }
-    },
+    }
   },
   methods: {
     onOpen() {
@@ -71,8 +71,8 @@ export default {
           : this.$refs.iconWrap.childNodes[0];
         $activeItem && $activeItem.scrollIntoView && $activeItem.scrollIntoView();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

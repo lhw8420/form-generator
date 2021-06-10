@@ -25,9 +25,9 @@ const components = {
         }}
       >
         <i class="el-icon-delete" />
-      </span>,
+      </span>
     ];
-  },
+  }
 };
 const layouts = {
   colFormItem(h, currentItem, index, list) {
@@ -107,7 +107,7 @@ const layouts = {
         {child}
       </render>
     );
-  },
+  }
 };
 
 function renderChildren(h, currentItem, index, list) {
@@ -129,7 +129,7 @@ function layoutIsNotFound() {
 export default {
   components: {
     render,
-    draggable,
+    draggable
   },
   props: ['currentItem', 'index', 'drawingList', 'activeId', 'formConf'],
   render(h) {
@@ -139,6 +139,6 @@ export default {
       return layout.call(this, h, this.currentItem, this.index, this.drawingList);
     }
     return layoutIsNotFound.call(this);
-  },
+  }
 };
 </script>
